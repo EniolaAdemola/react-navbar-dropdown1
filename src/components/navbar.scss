@@ -1,0 +1,136 @@
+/*************** Medium Screen size ***************/
+@mixin tablet {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+/*************** Mobile Screen size ***************/
+@mixin mobile {
+    @media screen and (max-width: 720px) {
+        @content;
+    }
+}
+
+nav {
+    background: hsla(0, 100%, 100%, 0.9);
+    height: 5rem;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    // position: fixed;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 13px rgb(0 0 0 / 5%);
+
+    .nav__container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        
+        .logo {
+            color: #1888ff;
+            font-size: 1.5rem;
+            max-width: 10rem;
+            display: block;
+        }
+        
+/********** Navlink style ********/       
+         .nav__links {
+            display: flex;
+            gap: 5rem;
+            align-items: center;
+            @include tablet {
+                flex-direction: column;
+                gap: 0;
+                // perspective: 400px;
+                position: absolute;
+                right: 0;
+                top: 100%;
+                // .show__nav {
+                //     display: flex;
+                // }
+                // .hide__nav {
+                //     background-color: red;
+                //     display: none;
+                // }
+            }
+
+            .nav__link {
+                display: flex;
+                gap: 3rem;
+                align-items: center;
+
+                .nav__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    height: 8vh;
+                }
+            }
+
+            .services {
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+                .icon {
+                    margin: 2px 0 0;
+                }
+            }
+
+            .active-nav {
+                color: #1888ff;
+            }
+
+            .nav__register {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+
+        .nav__register {
+            display: flex;
+            gap: 2rem;
+
+            .btn {
+                background-color: #1888ff;
+                padding: 8px 10px;
+                color: #fff;
+                border-radius: 5px;
+                font-size: 15px;
+                cursor: pointer;
+    
+                &:hover {
+                    transition: all 0.3s ease-out;
+                    background-color: transparent;
+                    color: #fff;
+                    border: 2px solid #1888ff;
+                    transition: all 0.3s ease-out;
+                }
+            }
+        }
+    }
+    .nav__toggle-btn {
+        display: none;
+        @include tablet {
+            display: flex;
+            background: transparent;
+            font-size: 1.6rem;
+            align-items: center;
+            color: #0a72e1;
+            cursor: pointer;
+        }
+    }
+
+    .nav__menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
