@@ -1,0 +1,28 @@
+.service__submenu {
+    position: absolute;
+    width: 10rem;
+    text-align: start;
+    background-color: #1888ff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 70px;   
+    border-radius: 5px; 
+    // left: 10px;
+    
+    li {
+        padding: 16px 10px;
+        
+        &:hover {
+            background: rgb(34, 42, 93);
+            transition: all .3s;
+        }
+        a {
+            color: #fff;
+        }
+
+    }
+}
+.service__submenu.clicked {
+    display: none;
+}

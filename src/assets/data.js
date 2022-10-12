@@ -4,23 +4,23 @@ export const links = [
 	{
 		name: "Home",
 		path: "/",
-		cName: "home",
+		cName: "nav__item",
 	},
 	{
 		name: "Services",
 		path: "/services",
 		icon: <AiFillCaretDown className="icon" />,
-		cName: "services",
+		cName: "nav__item",
 	},
 	{
 		name: "Product",
 		path: "/product",
-		cName: "product",
+		cName: "nav__item",
 	},
 	{
 		name: "Contact Us",
 		path: "/contact",
-		cName: "contact",
+		cName: "nav__item",
 	},
 ];
 
